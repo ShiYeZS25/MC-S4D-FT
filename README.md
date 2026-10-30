@@ -16,13 +16,13 @@ Run from the repository root. Set `--camels_root` to the CAMELS directory
 containing `basin_mean_forcing/nldas_extended` (or `nldas`),
 `usgs_streamflow`, and `camels_attributes_v2.0`. The basin list is
 `data/basin_list.txt`. Settings are passed through command-line arguments;
-`configs/` contains the seed300 reference configurations.
+`configs/` contains the seed200 reference configurations.
 
 ```console
 python -m pip install -r requirements.txt
-python train.py train --model siso --seed 300 --gpu 0 --camels_root PATH_TO_CAMELS --auto_eval
-python train.py train --model softplus --seed 300 --gpu 0 --camels_root PATH_TO_CAMELS --auto_eval
-python train.py train --model mc --seed 300 --gpu 0 --camels_root PATH_TO_CAMELS --auto_eval
+python train.py train --model siso --seed 200 --gpu 0 --camels_root PATH_TO_CAMELS --auto_eval
+python train.py train --model softplus --seed 200 --gpu 0 --camels_root PATH_TO_CAMELS --auto_eval
+python train.py train --model mc --seed 200 --gpu 0 --camels_root PATH_TO_CAMELS --auto_eval
 python train.py evaluate --run_dir runs/RUN_NAME --epoch_num 49 --gpu 0 --camels_root PATH_TO_CAMELS
 python eval_comprehensive.py --run_dir runs/RUN_NAME --epoch 49 --gpu 0 --camels_root PATH_TO_CAMELS
 ```
